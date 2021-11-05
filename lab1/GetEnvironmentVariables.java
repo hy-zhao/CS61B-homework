@@ -3,20 +3,22 @@ import java.util.Properties;
 public class GetEnvironmentVariables {
 
     //  Fill in the path to your sp21-s*** folder between the quotes
-    public static String REPO_DIR = "";
+    public static String REPO_DIR = "/Users/melody/Downloads/homework/CS61B-homework/";
 
     //  Fill in the path to your snaps-sp21-s*** folder between the quotes
     public static String SNAPS_DIR = "";
 
     // Fill in the type of your shell by running 'echo $0` in your terminal. It should be zsh or bash.
-    public static String SHELL = "";
+    public static String SHELL = "zsh";
 
     public static void main(String[] args) {
 
-        String catalina = "echo 'export {variable}={value}' >> ~/.zprofile";
+//        String catalina = "echo 'export {variable}={value}' >> ~/.zprofile";
+        String catalina = "echo 'export {variable}={value}' >> ~/.zshrc";
         String mac = "echo 'export {variable}={value}' >> ~/.bash_profile";
         String linux = "echo 'export {variable}={value}' >> ~/.bashrc";
-        String catalinaSource = "source ~/.zprofile";
+//        String catalinaSource = "source ~/.zprofile";
+        String catalinaSource = "source ~/.zshrc";
         String macSource = "source ~/.bash_profile";
         String linuxSource = "source ~/.bashrc";
 
