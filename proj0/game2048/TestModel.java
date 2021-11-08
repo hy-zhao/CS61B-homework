@@ -927,6 +927,7 @@ public class TestModel extends TestUtils {
                 {4, 2, 4, 2}
         };
         updateModel(board, 0, 0, false);
+        model.gameOver();
         assertFalse("Game isn't over. Any tilt will result in a change:"
                 + model, model.gameOver());
     }
@@ -941,6 +942,7 @@ public class TestModel extends TestUtils {
                 {4, 2, 4, 0}
         };
         updateModel(board, 0, 0, false);
+        boolean i = model.gameOver();
         assertFalse("Game isn't over. A tilt right or down will result"
                 + " in a change:" + model, model.gameOver());
     }
